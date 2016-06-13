@@ -9,4 +9,4 @@ var querySystem = function() {
 			"class": "my-new-list",
 			html: items.join( "" )
 		}).appendTo( "body" );	
-};
+});
