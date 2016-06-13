@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Knockout JS Sample</title>
+
+<!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/> -->
+<!-- <script type="text/javascript" src="../javascript/knockout-3.4.0.js"></script> -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+
+<script type="text/javascript" src="ReservationsKO.js"></script>
+
+<style type="text/css">
+body {
+//	background-image : url(http://images.123hdwallpapers.com/20150726/eve-online-games-planet-space-1920x1080.jpg);
+}
+</style>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="page-header">
+	<h1>Knockout JS Tutorial</h1>
+	<p>This page uses Knockout JS and Bootstrap to add and remove seat reservations.</p>
+	<p>Your seat reservations (<span data-bind="text: seats().length"></span>)</p>
+</div>
+
+<button data-bind="click: addSeat, enable: seats().length < 5" class="btn btn-primary">Add Reservation</button>
+
+<div class="table-responsive">
+<table class="table table-hover">
+	<thead class="thead-default">
+		<tr>
+			<th>#</th>
+			<th>Passenger name</th>
+			<th>Meal</th>
+			<th>Surcharge</th>
+			<th></th>
+		</tr>
+	</thead>
+	<!-- Todo: Generate table body -->
+
+	<tbody data-bind="foreach: seats">
+		<tr>
+			<th scope="row" data-bind="text: $index() + 1"></th>
+			<td><input data-bind="value: name" tabindex="1" /></td>
+			<!-- , attr: { tabIndex: $index } -->
+			<td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'" tabindex="2"></select></td>
+			<!-- , attr: { tabIndex: $index + this.length } -->
+			<td data-bind="text: formattedPrice"></td>
+			<td><a href="#" data-bind="click: $root.removeSeat" class="btn btn-danger" tabindex="3">Remove</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<h3 data-bind="visible: totalSurcharge() > 0">
+	Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+</h3>
+
+</div>
+</body>
+</html>
