@@ -1,4 +1,4 @@
-var querySystem = function() {
+function querySystem() {
 	$.getJSON( "https://crest-tq.eveonline.com/solarsystems/30000001/", function(data) {
 		var items = [];
 		$.each( data, function( key, val ) {
