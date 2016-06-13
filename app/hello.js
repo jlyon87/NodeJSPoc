@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$.ajax({
+	$.get({
 		url: "//rest-service.guides.spring.io/greeting/"
 	}).then(function(data) {
 		$(".greeting-id").append(data.id);
