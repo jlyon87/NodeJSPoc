@@ -15,7 +15,7 @@
 		totalCount: ko.observable()
 	};
 
-	SolarSystem.service.queryAllSystems(function(res, event) {
+	model = SolarSystem.service.queryAllSystems(/*function(res, event) {
 		if(!event.status) {
 			// handle error
 			console.log("error");
@@ -24,7 +24,7 @@
 
 		console.dir(res);
 		model = res;
-	});
+	}*/);
 
 	ko.applyBindings(eveCrestResponse);
 })();

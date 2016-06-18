@@ -6,7 +6,7 @@ var SolarSystem = (function(SolarSystem) {
 
 	return SolarSystem;
 
-	function queryAllSystems(callback) {
+	function queryAllSystems() {
 		console.log('enter queryAllSystems');
 		$.getJSON( "https://crest-tq.eveonline.com/solarsystems/", function(data) {
 			/*var items = [];
