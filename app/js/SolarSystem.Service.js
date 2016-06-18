@@ -1,4 +1,4 @@
-var SolarSystem = (function(SolarSystem)) {
+var SolarSystem = (function(SolarSystem) {
 
 	SolarSystem.Service = {
 		queryAllSystems: queryAllSystems
@@ -22,4 +22,5 @@ var SolarSystem = (function(SolarSystem)) {
 			return data;
 		});
 	}
-}
+
+})(SolarSystem || {});
