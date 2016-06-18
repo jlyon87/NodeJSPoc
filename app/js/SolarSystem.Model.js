@@ -20,6 +20,7 @@
 			return;
 		}
 
+		console.dir(res);
 		model = res;
 	});
 

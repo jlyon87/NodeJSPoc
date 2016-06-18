@@ -19,6 +19,7 @@ var SolarSystem = (function(SolarSystem) {
 				"class": "my-new-list",
 				html: items.join( "" )
 			}).appendTo( "body" );	*/
+			console.log('Query All Systems Complete.');
 			return data;
 		});
 	}
