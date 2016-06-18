@@ -17,6 +17,7 @@
 	SolarSystem.service.queryAllSystems(function(res, event) {
 		if(!event.status) {
 			// handle error
+			console.log("error");
 			return;
 		}
 
