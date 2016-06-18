@@ -1,4 +1,5 @@
 (function() {
+	console.log('enter solarsystem.model class');
 	var SolarSystem = {
 		href: ko.observable(),
 		id: ko.observable(),

@@ -1,5 +1,5 @@
 var SolarSystem = (function(SolarSystem) {
-
+	console.log('enter solarsystem.service class');
 	SolarSystem.Service = {
 		queryAllSystems: queryAllSystems
 	};
@@ -7,6 +7,7 @@ var SolarSystem = (function(SolarSystem) {
 	return SolarSystem;
 
 	function queryAllSystems(callback) {
+		console.log('enter queryAllSystems');
 		$.getJSON( "https://crest-tq.eveonline.com/solarsystems/", function(data) {
 			/*var items = [];
 			$.each( data, function( key, val ) {
