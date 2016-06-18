@@ -22,7 +22,7 @@ var SolarSystem = (function(SolarSystem) {
 			}).appendTo( "body" );	*/
 			console.log('Query All Systems Complete.');
 			console.dir(data);
-			return data;
+//			return data;
 		});
 	}
 
