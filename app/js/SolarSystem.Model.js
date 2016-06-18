@@ -17,7 +17,7 @@
 
 	ko.applyBindings(eveCrestResponse);
 
-	model = SolarSystem.Service.queryAllSystems(/*function(res, event) {
+	SolarSystem.Service.queryAllSystems(function(res, event) {
 		if(!event.status) {
 			// handle error
 			console.log("error");
@@ -26,6 +26,6 @@
 
 		console.dir(res);
 		model = res;
-	}*/);
+	});
 
 })();
