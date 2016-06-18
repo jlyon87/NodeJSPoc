@@ -27,4 +27,4 @@
 	});
 
 	ko.applyBindings(eveCrestResponse);
-});
+})();
