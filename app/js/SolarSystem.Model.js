@@ -1,6 +1,6 @@
 (function() {
 	console.log('enter solarsystem.model class');
-	var SolarSystem = {
+	var item = {
 		href: ko.observable(),
 		id: ko.observable(),
 		id_str: ko.observable(),
@@ -9,11 +9,13 @@
 
 	var eveCrestResponse = {
 		totalCount_str: ko.observable(),
-		SolarSystems: ko.observableArray(),
+		items: ko.observableArray(),
 		pageCount: ko.observable(),
 		pageCount_str: ko.observable(),
 		totalCount: ko.observable()
 	};
+
+	ko.applyBindings(eveCrestResponse);
 
 	model = SolarSystem.service.queryAllSystems(/*function(res, event) {
 		if(!event.status) {
@@ -26,5 +28,4 @@
 		model = res;
 	}*/);
 
-	ko.applyBindings(eveCrestResponse);
 })();
