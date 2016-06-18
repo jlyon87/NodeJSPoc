@@ -7,11 +7,11 @@
 	};
 
 	var eveCrestResponse = {
-		var totalCount_str: ko.observable(),
-		var SolarSystems: ko.observableArray(),
-		var pageCount: ko.observable(),
-		var pageCount_str: ko.observable(),
-		var totalCount: ko.observable()
+		totalCount_str: ko.observable(),
+		SolarSystems: ko.observableArray(),
+		pageCount: ko.observable(),
+		pageCount_str: ko.observable(),
+		totalCount: ko.observable()
 	};
 
 	SolarSystem.service.queryAllSystems(function(res, event) {
