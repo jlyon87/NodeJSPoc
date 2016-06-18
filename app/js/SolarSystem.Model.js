@@ -25,7 +25,7 @@
 		}
 
 		console.dir(res);
-		model = res;
+		eveCrestResponse = res;
 	});
 
 })();
